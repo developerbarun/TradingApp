@@ -27,7 +27,7 @@ const SellActionWindow = ({ uid }) => {
     }
 
     try {
-      await axios.post("http://localhost:3002/newSellOrder", {
+      await axios.post("https://trading-app-backend-gilt.vercel.app/newSellOrder", {
         name: uid,
         qty: stockQuantity,
         price: stockPrice,
