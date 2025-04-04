@@ -16,7 +16,7 @@ const Login = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:3002/login", formData);
+      const res = await axios.post("https://trading-app-backend-gilt.vercel.app/login", formData);
       const token = res.data.token;
       const user = res.data.user;
 

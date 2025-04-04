@@ -9,7 +9,7 @@ const Holdings = () => {
 
   const fetchHoldings = async () => {
     try {
-      const res = await axios.get("http://localhost:3002/allHoldings");
+      const res = await axios.get("https://trading-app-backend-gilt.vercel.app/allHoldings");
       setAllHoldings(res.data);
     } catch (err) {
       console.error("Error fetching holdings:", err.message);

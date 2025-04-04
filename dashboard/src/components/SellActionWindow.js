@@ -11,7 +11,7 @@ const SellActionWindow = ({ uid }) => {
   const context = useContext(GeneralContext);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
+    axios.get("https://trading-app-backend-gilt.vercel.app/allHoldings").then((res) => {
       const holding = res.data.find((item) => item.name === uid);
       if (holding) {
         setAvailableQty(holding.qty);

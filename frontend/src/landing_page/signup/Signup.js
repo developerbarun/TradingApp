@@ -23,7 +23,7 @@ const Signup = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:3002/signup", formData);
+      const res = await axios.post("https://trading-app-backend-gilt.vercel.app/signup", formData);
       localStorage.setItem("token", res.data.token); // Store JWT
       localStorage.setItem("user", JSON.stringify(res.data.user)); // Save user too
       window.location.href =

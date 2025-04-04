@@ -21,7 +21,7 @@ const WatchList = () => {
   //  Refresh orders after Buy/Sell
   const refreshOrders = async () => {
     try {
-      await axios.get("http://localhost:3002/orders");
+      await axios.get("https://trading-app-backend-gilt.vercel.app/orders");
     } catch (err) {
       console.error("Error refreshing orders", err.message);
     }
@@ -30,7 +30,7 @@ const WatchList = () => {
   //  Refresh holdings after Buy/Sell
   const refreshHoldings = async () => {
     try {
-      await axios.get("http://localhost:3002/allHoldings");
+      await axios.get("https://trading-app-backend-gilt.vercel.app/allHoldings");
     } catch (err) {
       console.error("Error refreshing holdings", err.message);
     }

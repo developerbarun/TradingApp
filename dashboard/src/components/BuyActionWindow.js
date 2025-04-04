@@ -11,7 +11,7 @@ const BuyActionWindow = ({ uid }) => {
 
   const handleBuyClick = async () => {
     try {
-      await axios.post("http://localhost:3002/newOrder", {
+      await axios.post("https://trading-app-backend-gilt.vercel.app/newOrder", {
         name: uid,
         qty: stockQuantity,
         price: stockPrice,

@@ -7,7 +7,7 @@ const Orders = () => {
 
   const fetchOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:3002/orders");
+      const res = await axios.get("https://trading-app-backend-gilt.vercel.app/orders");
       setOrders(res.data);
     } catch (err) {
       console.error("Error fetching orders", err);
