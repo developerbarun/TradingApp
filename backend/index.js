@@ -157,10 +157,7 @@ app.post("/login", async (req, res) => {
 app.listen(PORT, async () => {
   console.log("App started!");
   try {
-    await mongoose.connect(uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(uri);
     console.log("DB connected!");
   } catch (err) {
     console.error("DB connection error:", err.message);
