@@ -156,14 +156,17 @@ app.post("/login", async (req, res) => {
 });
 
 
+async function apps(){
+  app.listen(PORT,() => {
+    console.log("App started!");
+  })
 
-
-app.listen(PORT, async () => {
-  console.log("App started!");
   try {
     await mongoose.connect(uri);
     console.log("DB connected!");
   } catch (err) {
     console.error("DB connection error:", err.message);
   }
-});
+}
+
+apps();
